@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background: #f0afcf;
+    color: #fff;
+}
+
+header {
+    background-color: #83536b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cart-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart-button {
+    background-color: #fff;
+    color: #83536b;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-badge {
+    background-color: #83536b;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 100px;
+}
+
+.item {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: calc(25% - 16px); /* 4 items per row with spacing */
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.add-to-cart-btn {
+    background-color: #f0afcf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #83536b;
+}
+
+.modal {
+    display: none; /* Skriva modalni prozor po defaultu */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show-modal {
+    display: block; /* Prikazuje modalni prozor kada ima klasu show-modal */
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: #f0afcf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #83536b;
+}
+
+footer {
+    background-color: #83536b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0; 
+}

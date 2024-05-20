@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fairytale Web Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fairytale Web Shop</h1>
+        <div class="cart-container">
+            <button class="cart-button">Magic Cart <span class="cart-badge">0</span></button>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for items...">
+    </div>
+
+    <div class="items-grid"></div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <ul class="cart-items"></ul>
+            <p>Total: <span class="cart-total">$0.00</span></p>
+            <button class="buy-btn">Buy</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Welcome to our magic shop. Sponsored by fairies.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
